@@ -1,0 +1,24 @@
+product: jvm/app
+
+settings:
+  ktor: enabled
+  jvm:
+    mainClass: org.jetbrains.amper.ktor.ApplicationKt
+
+dependencies:
+  - org.xerial:sqlite-jdbc:3.46.1.0
+  - $ktor.server.core
+  - io.ktor:ktor-server-cors:3.5.2
+  - $ktor.server.netty
+  - $ktor.server.config.yaml
+  - io.ktor:ktor-client-core:3.5.2
+  - io.ktor:ktor-client-cio:3.5.2
+  - io.ktor:ktor-client-content-negotiation:3.5.2
+  - io.ktor:ktor-serialization-kotlinx-json:3.5.2
+  - io.ktor:ktor-client-java:3.5.2
+  - ch.qos.logback:logback-classic:1.5.38
+
+test-dependencies:
+  - $ktor.server.testHost
+  - io.ktor:ktor-client-mock:3.5.2
+
